@@ -1,1 +1,2 @@
-# easyclick-libs
+# 说明
+- 该仓库专门用户存放EasyClick的三方扩展类库，包括ui、js、以及插件等
