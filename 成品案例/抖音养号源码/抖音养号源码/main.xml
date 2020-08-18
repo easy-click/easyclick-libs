@@ -1,0 +1,214 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<ScrollView
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xsi:noNamespaceSchemaLocation="layout.xsd"
+        android:layout_height="match_parent"
+        android:layout_width="match_parent"
+>
+
+    <LinearLayout
+            android:layout_height="match_parent"
+            android:layout_width="match_parent"
+            android:orientation="vertical"
+    >
+
+        <EditText android:layout_height="40dp"
+                  android:layout_width="match_parent"
+                  android:tag="jihuoma"
+                  android:text=""
+                  android:textColor="#669999"
+                  android:textSize="15dp"
+                  android:gravity="center"
+                  android:maxLength="12"
+                  android:hint="请输入激活码"
+        />
+        <LinearLayout
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:orientation="horizontal"
+    >
+        <TextView android:layout_height="wrap_content"
+                  android:layout_width="wrap_content"
+                  android:text="随机观看:"
+                  android:textColor="#669999"
+                  android:textSize="14dp"
+                  android:layout_marginLeft="5dp"
+        />
+        <EditText android:layout_height="35dp"
+                  android:layout_width="25dp"
+                  android:tag="gksl"
+                  android:text="10"
+                  android:textColor="#669999"
+                  android:textSize="14dp"
+                  android:gravity="center"
+        />
+        <TextView android:layout_height="wrap_content"
+                  android:layout_width="wrap_content"
+                  android:text="-"
+                  android:textColor="#669999"
+                  android:textSize="14dp"
+                  android:layout_marginLeft="5dp"
+        />
+        <EditText android:layout_height="35dp"
+                  android:layout_width="25dp"
+                  android:tag="gksl1"
+                  android:text="20"
+                  android:textColor="#669999"
+                  android:textSize="14dp"
+                  android:gravity="center"
+        />
+    </LinearLayout>
+        <LinearLayout
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:orientation="horizontal"
+        >
+            <CheckBox android:layout_height="wrap_content"
+                      android:layout_width="wrap_content"
+                      android:tag="dz"
+                      android:text="点赞开关"
+                      android:textColor="#669999"
+                      android:textSize="14dp"
+                      android:gravity="center"
+                      android:checked="true"
+
+            />
+            <CheckBox android:layout_height="wrap_content"
+                      android:layout_width="wrap_content"
+                      android:tag="gz"
+                      android:text="关注开关"
+                      android:textColor="#669999"
+                      android:textSize="14dp"
+                      android:gravity="center"
+                      android:checked="true"
+
+            />
+            <CheckBox android:layout_height="wrap_content"
+                      android:layout_width="wrap_content"
+                      android:tag="pl"
+                      android:text="评论开关"
+                      android:textColor="#669999"
+                      android:textSize="14dp"
+                      android:gravity="center"
+                      android:checked="true"
+
+            />
+        </LinearLayout>
+        <LinearLayout
+                android:layout_height="match_parent"
+                android:layout_width="match_parent"
+                android:orientation="horizontal"
+        >
+            <TextView android:layout_height="wrap_content"
+                      android:layout_width="wrap_content"
+                      android:text="点赞概率:"
+                      android:textColor="#669999"
+                      android:textSize="14dp"
+                      android:layout_marginLeft="5dp"
+            />
+            <EditText android:layout_height="35dp"
+                      android:layout_width="25dp"
+                      android:tag="dzgl"
+                      android:text="40"
+                      android:textColor="#669999"
+                      android:textSize="14dp"
+                      android:gravity="center"
+            />
+            <TextView android:layout_height="wrap_content"
+                      android:layout_width="wrap_content"
+                      android:text="关注概率:"
+                      android:textColor="#669999"
+                      android:textSize="14dp"
+                      android:layout_marginLeft="5dp"
+            />
+            <EditText android:layout_height="35dp"
+                      android:layout_width="25dp"
+                      android:tag="gzgl"
+                      android:text="40"
+                      android:textColor="#669999"
+                      android:textSize="14dp"
+                      android:gravity="center"
+            />
+            <TextView android:layout_height="wrap_content"
+                      android:layout_width="wrap_content"
+                      android:text="评论概率:"
+                      android:textColor="#669999"
+                      android:textSize="14dp"
+                      android:layout_marginLeft="5dp"
+            />
+            <EditText android:layout_height="35dp"
+                      android:layout_width="25dp"
+                      android:tag="plgl"
+                      android:text="10"
+                      android:textColor="#669999"
+                      android:textSize="14dp"
+                      android:gravity="center"
+            />
+        </LinearLayout>
+        <LinearLayout
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:orientation="horizontal"
+        >
+            <CheckBox android:layout_height="wrap_content"
+                      android:layout_width="wrap_content"
+                      android:tag="sc"
+                      android:text="收藏开关"
+                      android:textColor="#669999"
+                      android:textSize="14dp"
+                      android:gravity="center"
+                      android:checked="true"
+
+            />
+            <CheckBox android:layout_height="wrap_content"
+                      android:layout_width="wrap_content"
+                      android:tag="bc"
+                      android:text="保存视频"
+                      android:textColor="#669999"
+                      android:textSize="14dp"
+                      android:gravity="center"
+                      android:checked="true"
+
+            />
+        </LinearLayout>
+        <LinearLayout
+                android:layout_height="match_parent"
+                android:layout_width="match_parent"
+                android:orientation="horizontal"
+        >
+            <TextView android:layout_height="wrap_content"
+                      android:layout_width="wrap_content"
+                      android:text="收藏概率:"
+                      android:textColor="#669999"
+                      android:textSize="14dp"
+                      android:layout_marginLeft="5dp"
+            />
+            <EditText android:layout_height="35dp"
+                      android:layout_width="25dp"
+                      android:tag="scgl"
+                      android:text="10"
+                      android:textColor="#669999"
+                      android:textSize="14dp"
+                      android:gravity="center"
+            />
+            <TextView android:layout_height="wrap_content"
+                      android:layout_width="wrap_content"
+                      android:text="保存概率:"
+                      android:textColor="#669999"
+                      android:textSize="14dp"
+                      android:layout_marginLeft="5dp"
+            />
+            <EditText android:layout_height="35dp"
+                      android:layout_width="25dp"
+                      android:tag="bcgl"
+                      android:text="10"
+                      android:textColor="#669999"
+                      android:textSize="14dp"
+                      android:gravity="center"
+            />
+        </LinearLayout>
+    </LinearLayout>
+
+</ScrollView>
+
