@@ -1,0 +1,36 @@
+/*
+username：联众账号
+password：联众密码
+img：验证码图片
+
+softwareId：开发者ID，在开发者后台获取
+softwareSecret：开发者秘钥，在开发者后台获取
+captchaType：验证码类型，截图问联众客服
+
+*/
+
+function 联众(username, password, img) {
+    var url = "https://v2-api.jsdama.com/upload";
+    var pa = {
+        softwareId: 14589,
+        softwareSecret: "LsKF2ERj2qDTst8eVeZiWGGoew88AdzsuIFrgzTA",
+        username: username,
+        password: password,
+        captchaData:  img,
+        captchaType: 1310,
+        captchaMinLength: 0,
+        captchaMaxLength: 0,
+        workerTipsId: 0
+    };
+    do {
+        var x = http.postJSON(url, pa, 10 * 1000, {"User-Agent": "test"});
+        toast(" 联众返回值     " + x);
+        if (x != null) {
+            break;
+        }
+    }while (true)
+    var d =JSON.parse(x);
+    toast("json:"+d);
+    logd("坐标属性:"+d.data.recognition);
+    return d.data.recognition;
+}
