@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+            xmlns:android="http://schemas.android.com/apk/res/android" xsi:noNamespaceSchemaLocation="layout.xsd"
+            android:layout_height="match_parent" android:layout_width="match_parent">
+
+
+    <LinearLayout android:layout_width="match_parent"
+                  android:layout_height="270dp"
+                  android:background="@drawable/sigin"
+                  android:padding="15dp"
+                  android:gravity="center"
+                  android:orientation="vertical">
+        <CardView android:layout_width="match_parent"
+                  android:layout_height="wrap_content"
+                  android:cardBackgroundColor="#FFFFFF"
+                  android:cardCornerRadius="5dp">
+            <LinearLayout android:orientation="horizontal"
+                          android:layout_width="match_parent"
+                          android:layout_height="wrap_content"
+                          android:gravity="center"
+                          android:padding="5dp">
+
+
+                <EditText android:layout_width="match_parent"
+                          android:layout_height="30dp"
+                          android:background="#00000000"
+                          android:padding="5dp"
+                          android:tag="yun_ban_id"
+                          android:layout_weight="1"
+                          android:hint="请输入id 以 -  分隔  列子： qf-1"
+                          android:textColor="#000000"/>
+
+                <TextView android:text=" "
+                          android:layout_width="20dp"
+                          android:layout_height="20dp"
+                          android:background="@drawable/clear"
+                          android:gravity="center"
+                          android:tag="clearZh"
+                          android:textSize="10sp"
+                          android:textColor="#ff0000"/>
+            </LinearLayout>
+        </CardView>
+        <CardView android:layout_width="match_parent"
+                  android:layout_height="wrap_content"
+                  android:cardBackgroundColor="#FFFFFF"
+                  android:cardCornerRadius="5dp">
+            <LinearLayout android:orientation="horizontal"
+                          android:layout_width="match_parent"
+                          android:layout_height="wrap_content"
+                          android:gravity="center"
+                          android:padding="5dp">
+
+
+                <EditText android:layout_width="0dp"
+                          android:layout_height="30dp"
+                          android:background="#00000000"
+                          android:padding="5dp"
+                          android:tag="yun_ban_kami"
+                          android:layout_weight="1"
+                          android:hint="请输入 卡密"
+                          android:textColor="#000000"/>
+
+                <TextView android:text=" "
+                          android:layout_width="20dp"
+                          android:layout_height="20dp"
+                          android:background="@drawable/clear"
+                          android:gravity="center"
+                          android:tag="clearPwd"
+                          android:textSize="10sp"
+                          android:textColor="#ff0000"/>
+            </LinearLayout>
+        </CardView>
+        <LinearLayout android:orientation="horizontal"
+                      android:layout_width="match_parent"
+                      android:layout_height="50dp"
+                      android:gravity="center_horizontal">
+            <CardView android:layout_width="wrap_parent"
+                      android:layout_height="wrap_content"
+                      android:cardBackgroundColor="#FFFFFF"
+                      android:padding="5dp"
+                      android:cardCornerRadius="5dp">
+                <TextView android:text="启动运行"
+                          android:layout_width="150dp"
+                          android:layout_height="50dp"
+                          android:padding="5dp"
+                          android:tag="ban_run"
+                          android:textSize="15sp"
+                          android:gravity="center"
+                          android:textColor="#72777b"
+                          android:background="#00000000"/>
+            </CardView>
+
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</ScrollView>

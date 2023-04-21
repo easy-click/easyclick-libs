@@ -1,0 +1,414 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema
+        xmlns:p1="http://schemas.android.com/apk/res/android"
+        attributeFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+    <xs:import schemaLocation="layout.attr.xsd"
+               namespace="http://schemas.android.com/apk/res/android"/>
+    <xs:annotation>
+        <xs:documentation>Android 布局文件的 XSD</xs:documentation>
+        <xs:documentation>1/23/2018 1:44:32 AM</xs:documentation>
+    </xs:annotation>
+    <xs:group name="any-view">
+        <xs:choice>
+            <xs:element ref="TextView"/>
+            <xs:element ref="View"/>
+            <xs:element ref="EditText"/>
+            <xs:element ref="ImageView"/>
+            <xs:element ref="ViewGroup"/>
+            <xs:element ref="Button"/>
+            <xs:element ref="LinearLayout"/>
+            <xs:element ref="FrameLayout"/>
+            <xs:element ref="Spinner"/>
+            <xs:element ref="RelativeLayout"/>
+            <xs:element ref="RadioButton"/>
+            <xs:element ref="CheckBox"/>
+            <xs:element ref="RadioGroup"/>
+            <xs:element ref="ScrollView"/>
+            <xs:element ref="WebView"/>
+            <xs:element ref="CardView"/>
+            <xs:element ref="Switch"/>
+            <xs:element ref="FlexboxLayout"/>
+            <xs:element ref="include"/>
+            <xs:element ref="HorizontalScrollView"/>
+            <xs:element ref="Canvas"/>
+        </xs:choice>
+    </xs:group>
+
+    <xs:element name="include" type="include">
+        <xs:annotation>
+            <xs:documentation>Runtime</xs:documentation>
+        </xs:annotation>
+    </xs:element>
+    <xs:complexType name="include">
+
+        <xs:attribute ref="p1:layout"/>
+
+    </xs:complexType>
+
+    <xs:element name="WebView" type="WebView">
+        <xs:annotation>
+            <xs:documentation>Runtime Type: android.webkit.WebView</xs:documentation>
+        </xs:annotation>
+    </xs:element>
+    <xs:complexType name="WebView">
+        <xs:complexContent mixed="false">
+            <xs:extension base="View">
+                <xs:attribute ref="p1:url"/>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+
+    <xs:element name="TextView" type="TextView">
+        <xs:annotation>
+            <xs:documentation>Runtime Type: android.widget.TextView</xs:documentation>
+        </xs:annotation>
+    </xs:element>
+    <xs:complexType name="TextView">
+        <xs:complexContent mixed="false">
+            <xs:extension base="View">
+                <xs:attribute ref="p1:text"/>
+                <xs:attribute ref="p1:hint"/>
+                <xs:attribute ref="p1:textColor"/>
+                <xs:attribute ref="p1:textSize"/>
+                <xs:attribute ref="p1:maxLines"/>
+                <xs:attribute ref="p1:maxHeight"/>
+                <xs:attribute ref="p1:lines"/>
+                <xs:attribute ref="p1:maxWidth"/>
+                <xs:attribute ref="p1:gravity"/>
+                <xs:attribute ref="p1:enabled"/>
+                <xs:attribute ref="p1:maxLength"/>
+                <xs:attribute ref="p1:ellipsize"/>
+                <xs:attribute ref="p1:inputType"/>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+    <xs:element name="View" type="View">
+        <xs:annotation>
+            <xs:documentation>Attributes that can be used with android.view.View or any of its subclasses. Also see
+                .ViewGroup_Layout for attributes that are processed by the view's parent.
+            </xs:documentation>
+        </xs:annotation>
+    </xs:element>
+    <xs:complexType name="View">
+        <xs:attribute ref="p1:tag"/>
+        <xs:attribute ref="p1:padding"/>
+        <xs:attribute ref="p1:paddingLeft"/>
+        <xs:attribute ref="p1:paddingTop"/>
+        <xs:attribute ref="p1:paddingRight"/>
+        <xs:attribute ref="p1:paddingBottom"/>
+        <xs:attribute ref="p1:visibility"/>
+        <xs:attribute ref="p1:clickable"/>
+        <xs:attribute ref="p1:layout_weight"/>
+        <xs:attribute ref="p1:minHeight"/>
+        <xs:attribute ref="p1:minWidth"/>
+        <xs:attribute ref="p1:background"/>
+        <xs:attribute ref="p1:layout_gravity"/>
+        <xs:attribute ref="p1:layout_width"/>
+        <xs:attribute ref="p1:layout_height"/>
+        <xs:attribute ref="p1:layout_margin"/>
+        <xs:attribute ref="p1:layout_marginLeft"/>
+        <xs:attribute ref="p1:layout_marginTop"/>
+        <xs:attribute ref="p1:layout_marginRight"/>
+        <xs:attribute ref="p1:layout_marginBottom"/>
+        <xs:attribute ref="p1:layout_marginStart"/>
+        <xs:attribute ref="p1:layout_marginEnd"/>
+        <xs:attribute ref="p1:layout_marginEnd"/>
+        <xs:attribute ref="p1:cornerRadius"/>
+        <xs:attribute ref="p1:layout_order"/>
+        <xs:attribute ref="p1:layout_flexGrow"/>
+        <xs:attribute ref="p1:layout_flexShrink"/>
+        <xs:attribute ref="p1:layout_alignSelf"/>
+        <xs:attribute ref="p1:layout_flexBasisPercent"/>
+        <xs:attribute ref="p1:layout_wrapBefore"/>
+        <xs:attribute ref="p1:layout_minWidth"/>
+        <xs:attribute ref="p1:layout_minHeight"/>
+        <xs:attribute ref="p1:layout_maxWidth"/>
+        <xs:attribute ref="p1:layout_maxHeight"/>
+
+
+    </xs:complexType>
+
+
+    <xs:element name="Canvas" type="Canvas">
+        <xs:annotation>
+            <xs:documentation>Runtime Type: Canvas</xs:documentation>
+        </xs:annotation>
+    </xs:element>
+    <xs:complexType name="Canvas">
+        <xs:complexContent mixed="false">
+            <xs:extension base="View"/>
+        </xs:complexContent>
+
+    </xs:complexType>
+
+    <xs:element name="EditText" type="EditText">
+        <xs:annotation>
+            <xs:documentation>Runtime Type: android.widget.EditText</xs:documentation>
+        </xs:annotation>
+    </xs:element>
+    <xs:complexType name="EditText">
+        <xs:complexContent mixed="false">
+            <xs:extension base="TextView"/>
+        </xs:complexContent>
+
+    </xs:complexType>
+    <xs:element name="ImageView" type="ImageView">
+        <xs:annotation>
+            <xs:documentation>Runtime Type: android.widget.ImageView</xs:documentation>
+        </xs:annotation>
+    </xs:element>
+    <xs:complexType name="ImageView">
+        <xs:complexContent mixed="false">
+            <xs:extension base="View">
+                <xs:attribute ref="p1:src"/>
+                <xs:attribute ref="p1:scaleType"/>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+    <xs:element name="android.webkit.WebView" type="android.webkit.WebView">
+        <xs:annotation>
+            <xs:documentation>Runtime Type: android.webkit.WebView</xs:documentation>
+        </xs:annotation>
+    </xs:element>
+    <xs:complexType name="android.webkit.WebView">
+        <xs:complexContent mixed="false">
+            <xs:extension base="AbsoluteLayout"/>
+        </xs:complexContent>
+    </xs:complexType>
+    <xs:element name="AbsoluteLayout" type="AbsoluteLayout">
+        <xs:annotation>
+            <xs:documentation>Runtime Type: android.widget.AbsoluteLayout</xs:documentation>
+        </xs:annotation>
+    </xs:element>
+    <xs:complexType name="AbsoluteLayout">
+        <xs:complexContent mixed="false">
+            <xs:extension base="ViewGroup"/>
+        </xs:complexContent>
+    </xs:complexType>
+    <xs:element name="ViewGroup" type="ViewGroup">
+        <xs:annotation>
+            <xs:documentation>Attributes that can be used with a android.view.ViewGroup or any of its subclasses. Also
+                see .ViewGroup_Layout for attributes that this class processes in its children.
+            </xs:documentation>
+        </xs:annotation>
+    </xs:element>
+    <xs:complexType name="ViewGroup">
+        <xs:complexContent mixed="false">
+            <xs:extension base="View">
+                <xs:group minOccurs="0" maxOccurs="unbounded" ref="any-view"/>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+    <xs:element name="Button" type="Button">
+        <xs:annotation>
+            <xs:documentation>Runtime Type: android.widget.Button</xs:documentation>
+        </xs:annotation>
+    </xs:element>
+    <xs:element name="CompoundButton" type="CompoundButton">
+        <xs:annotation>
+            <xs:documentation>Runtime Type: android.widget.CompoundButton</xs:documentation>
+        </xs:annotation>
+    </xs:element>
+    <xs:complexType name="CompoundButton">
+        <xs:complexContent mixed="false">
+            <xs:extension base="Button">
+                <xs:attribute ref="p1:checked"/>
+                <xs:attribute ref="p1:button"/>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+    <xs:complexType name="Button">
+        <xs:complexContent mixed="false">
+            <xs:extension base="TextView"/>
+        </xs:complexContent>
+    </xs:complexType>
+    <xs:element name="LinearLayout" type="LinearLayout">
+        <xs:annotation>
+            <xs:documentation>Runtime Type: android.widget.LinearLayout</xs:documentation>
+        </xs:annotation>
+    </xs:element>
+    <xs:complexType name="LinearLayout">
+        <xs:complexContent mixed="false">
+            <xs:extension base="ViewGroup">
+                <xs:attribute ref="p1:orientation"/>
+                <xs:attribute ref="p1:gravity"/>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+
+
+    <xs:element name="FrameLayout" type="FrameLayout">
+        <xs:annotation>
+            <xs:documentation>Runtime Type: android.widget.FrameLayout</xs:documentation>
+        </xs:annotation>
+    </xs:element>
+    <xs:complexType name="FrameLayout">
+        <xs:complexContent mixed="false">
+            <xs:extension base="ViewGroup">
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+
+    <xs:element name="CardView" type="CardView">
+        <xs:annotation>
+            <xs:documentation>Runtime Type: CardView</xs:documentation>
+        </xs:annotation>
+    </xs:element>
+
+    <xs:complexType name="CardView">
+        <xs:complexContent mixed="false">
+            <xs:extension base="FrameLayout">
+                <xs:attribute ref="p1:cardBackgroundColor"/>
+                <xs:attribute ref="p1:cardCornerRadius"/>
+                <xs:attribute ref="p1:cardElevation"/>
+                <xs:attribute ref="p1:cardMaxElevation"/>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+
+
+    <xs:element name="Switch" type="Switch">
+        <xs:annotation>
+            <xs:documentation>Runtime Type: android.widget.Switch</xs:documentation>
+        </xs:annotation>
+    </xs:element>
+    <xs:complexType name="Switch">
+        <xs:complexContent mixed="false">
+            <xs:extension base="CompoundButton"/>
+        </xs:complexContent>
+    </xs:complexType>
+
+    <xs:element name="Spinner" type="Spinner">
+        <xs:annotation>
+            <xs:documentation>Runtime Type: android.widget.Spinner</xs:documentation>
+        </xs:annotation>
+    </xs:element>
+    <xs:complexType name="Spinner">
+        <xs:complexContent mixed="false">
+            <xs:extension base="AbsSpinner">
+                <xs:attribute ref="p1:gravity"/>
+                <xs:attribute ref="p1:textColor"/>
+                <xs:attribute ref="p1:textSize"/>
+                <xs:attribute ref="p1:defaultText"/>
+                <xs:attribute ref="p1:popupHeight"/>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+    <xs:element name="AbsSpinner" type="AbsSpinner">
+        <xs:annotation>
+            <xs:documentation>Runtime Type: android.widget.AbsSpinner</xs:documentation>
+        </xs:annotation>
+    </xs:element>
+    <xs:complexType name="AbsSpinner">
+        <xs:complexContent mixed="false">
+            <xs:extension base="AdapterView">
+                <xs:attribute ref="p1:text"/>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+    <xs:element name="AdapterView" type="AdapterView">
+        <xs:annotation>
+            <xs:documentation>Runtime Type: android.widget.AdapterView</xs:documentation>
+        </xs:annotation>
+    </xs:element>
+    <xs:complexType name="AdapterView">
+        <xs:complexContent mixed="false">
+            <xs:extension base="ViewGroup"/>
+        </xs:complexContent>
+    </xs:complexType>
+    <xs:element name="RelativeLayout" type="RelativeLayout">
+        <xs:annotation>
+            <xs:documentation>Runtime Type: android.widget.RelativeLayout</xs:documentation>
+        </xs:annotation>
+    </xs:element>
+    <xs:complexType name="RelativeLayout">
+        <xs:complexContent mixed="false">
+            <xs:extension base="ViewGroup">
+                <xs:attribute ref="p1:gravity"/>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+    <xs:element name="RadioButton" type="RadioButton">
+        <xs:annotation>
+            <xs:documentation>Runtime Type: android.widget.RadioButton</xs:documentation>
+        </xs:annotation>
+    </xs:element>
+    <xs:complexType name="RadioButton">
+        <xs:complexContent mixed="false">
+            <xs:extension base="CompoundButton"/>
+
+        </xs:complexContent>
+    </xs:complexType>
+    <xs:element name="CheckBox" type="CheckBox">
+        <xs:annotation>
+            <xs:documentation>Runtime Type: android.widget.CheckBox</xs:documentation>
+        </xs:annotation>
+    </xs:element>
+    <xs:complexType name="CheckBox">
+        <xs:complexContent mixed="false">
+            <xs:extension base="CompoundButton"/>
+        </xs:complexContent>
+    </xs:complexType>
+
+    <xs:element name="ScrollView" type="ScrollView">
+        <xs:annotation>
+            <xs:documentation>Runtime Type: android.widget.ScrollView</xs:documentation>
+        </xs:annotation>
+    </xs:element>
+    <xs:complexType name="ScrollView">
+        <xs:complexContent mixed="false">
+            <xs:extension base="FrameLayout">
+                <xs:attribute ref="p1:fillViewport"/>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+
+
+    <xs:element name="HorizontalScrollView" type="HorizontalScrollView">
+        <xs:annotation>
+            <xs:documentation>Runtime Type: android.widget.HorizontalScrollView</xs:documentation>
+        </xs:annotation>
+    </xs:element>
+    <xs:complexType name="HorizontalScrollView">
+        <xs:complexContent mixed="false">
+            <xs:extension base="FrameLayout">
+                <xs:attribute ref="p1:fillViewport"/>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+
+    <xs:element name="RadioGroup" type="RadioGroup">
+        <xs:annotation>
+            <xs:documentation>Runtime Type: android.widget.RadioGroup</xs:documentation>
+        </xs:annotation>
+    </xs:element>
+
+    <xs:complexType name="RadioGroup">
+        <xs:complexContent mixed="false">
+            <xs:extension base="LinearLayout">
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+
+
+    <xs:element name="FlexboxLayout" type="FlexboxLayout">
+        <xs:annotation>
+            <xs:documentation>Runtime Type: com.google.android.flexbox.FlexboxLayout</xs:documentation>
+        </xs:annotation>
+    </xs:element>
+
+    <xs:complexType name="FlexboxLayout">
+        <xs:complexContent mixed="false">
+            <xs:extension base="ViewGroup">
+                <xs:attribute ref="p1:flexDirection"/>
+                <xs:attribute ref="p1:flexWrap"/>
+                <xs:attribute ref="p1:justifyContent"/>
+                <xs:attribute ref="p1:alignItems"/>
+                <xs:attribute ref="p1:alignContent"/>
+                <xs:attribute ref="p1:alignContent"/>
+            </xs:extension>
+        </xs:complexContent>
+    </xs:complexType>
+
+
+</xs:schema>

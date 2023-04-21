@@ -1,0 +1,1150 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:android="http://schemas.android.com/apk/res/android" attributeFormDefault="qualified"
+           elementFormDefault="unqualified" targetNamespace="http://schemas.android.com/apk/res/android"
+           xmlns:xs="http://www.w3.org/2001/XMLSchema">
+    <xs:annotation>
+        <xs:documentation>Android 布局文件的 XSD</xs:documentation>
+        <xs:documentation>7/18/2018 10:39:39 AM</xs:documentation>
+    </xs:annotation>
+
+    <xs:attribute name="background">
+        <xs:annotation>
+            <xs:documentation>背景颜色，示例:
+                "#ff000000" (黑色).
+            </xs:documentation>
+        </xs:annotation>
+        <xs:simpleType>
+            <xs:union memberTypes="xs:string">
+            </xs:union>
+        </xs:simpleType>
+    </xs:attribute>
+    <xs:attribute name="layout">
+        <xs:annotation>
+            <xs:documentation>layout
+            </xs:documentation>
+        </xs:annotation>
+        <xs:simpleType>
+            <xs:union memberTypes="xs:string">
+            </xs:union>
+        </xs:simpleType>
+    </xs:attribute>
+
+
+    <xs:attribute name="button">
+        <xs:annotation>
+            <xs:documentation>Drawable used for the button graphic (e.g. checkbox, radio button, etc).
+            </xs:documentation>
+        </xs:annotation>
+        <xs:simpleType>
+            <xs:union memberTypes="xs:string">
+            </xs:union>
+        </xs:simpleType>
+    </xs:attribute>
+
+
+    <xs:attribute name="checked">
+        <xs:annotation>
+            <xs:documentation>Indicates the initial checked state of this button.</xs:documentation>
+        </xs:annotation>
+        <xs:simpleType>
+            <xs:union memberTypes="xs:string">
+                <xs:simpleType>
+                    <xs:restriction base="xs:string">
+                        <xs:enumeration value="false"/>
+                        <xs:enumeration value="true"/>
+                    </xs:restriction>
+                </xs:simpleType>
+            </xs:union>
+        </xs:simpleType>
+    </xs:attribute>
+
+
+    <xs:attribute name="clickable">
+        <xs:annotation>
+            <xs:documentation>Defines whether this view reacts to click events.</xs:documentation>
+        </xs:annotation>
+        <xs:simpleType>
+            <xs:union memberTypes="xs:string">
+                <xs:simpleType>
+                    <xs:restriction base="xs:string">
+                        <xs:enumeration value="false"/>
+                        <xs:enumeration value="true"/>
+                    </xs:restriction>
+                </xs:simpleType>
+            </xs:union>
+        </xs:simpleType>
+    </xs:attribute>
+
+
+    <xs:attribute name="ellipsize">
+        <xs:annotation>
+            <xs:documentation></xs:documentation>
+        </xs:annotation>
+        <xs:simpleType>
+            <xs:union memberTypes="xs:string">
+                <xs:simpleType>
+                    <xs:restriction base="xs:string">
+                        <xs:enumeration value="end"/>
+                        <xs:enumeration value="marquee"/>
+                        <xs:enumeration value="middle"/>
+                        <xs:enumeration value="none"/>
+                        <xs:enumeration value="start"/>
+                    </xs:restriction>
+                </xs:simpleType>
+            </xs:union>
+        </xs:simpleType>
+    </xs:attribute>
+
+
+    <xs:attribute name="inputType">
+        <xs:annotation>
+            <xs:documentation></xs:documentation>
+        </xs:annotation>
+        <xs:simpleType>
+            <xs:union memberTypes="xs:string">
+                <xs:simpleType>
+                    <xs:restriction base="xs:string">
+                        <xs:enumeration value="text"/>
+                        <xs:enumeration value="phone"/>
+                        <xs:enumeration value="number"/>
+                        <xs:enumeration value="textPassword"/>
+                        <xs:enumeration value="numberPassword"/>
+                    </xs:restriction>
+                </xs:simpleType>
+            </xs:union>
+        </xs:simpleType>
+    </xs:attribute>
+
+    <xs:attribute name="enabled">
+        <xs:annotation>
+            <xs:documentation>Specifies whether the widget is enabled. The interpretation of the enabled state varies by
+                subclass. For example, a non-enabled EditText prevents the user from editing the contained text, and a
+                non-enabled Button prevents the user from tapping the button. The appearance of enabled and non-enabled
+                widgets may differ, if the drawables referenced from evaluating state_enabled differ.
+            </xs:documentation>
+        </xs:annotation>
+        <xs:simpleType>
+            <xs:union memberTypes="xs:string">
+                <xs:simpleType>
+                    <xs:restriction base="xs:string">
+                        <xs:enumeration value="false"/>
+                        <xs:enumeration value="true"/>
+
+                    </xs:restriction>
+                </xs:simpleType>
+            </xs:union>
+        </xs:simpleType>
+    </xs:attribute>
+
+    <xs:attribute name="fillViewport">
+        <xs:annotation>
+            <xs:documentation></xs:documentation>
+        </xs:annotation>
+        <xs:simpleType>
+            <xs:union memberTypes="xs:string">
+                <xs:simpleType>
+                    <xs:restriction base="xs:string">
+                        <xs:enumeration value="false"/>
+                        <xs:enumeration value="true"/>
+
+                    </xs:restriction>
+                </xs:simpleType>
+            </xs:union>
+        </xs:simpleType>
+    </xs:attribute>
+
+
+    <xs:attribute name="focusable">
+        <xs:annotation>
+            <xs:documentation>Boolean that controls whether a view can take focus. By default the user can not move
+                focus to a view; by setting this attribute to true the view is allowed to take focus. This value does
+                not impact the behavior of directly calling android.view.View.requestFocus, which will always request
+                focus regardless of this view. It only impacts where focus navigation will try to move focus.
+            </xs:documentation>
+        </xs:annotation>
+        <xs:simpleType>
+            <xs:union memberTypes="xs:string">
+                <xs:simpleType>
+                    <xs:restriction base="xs:string">
+                        <xs:enumeration value="false"/>
+                        <xs:enumeration value="true"/>
+                    </xs:restriction>
+                </xs:simpleType>
+            </xs:union>
+        </xs:simpleType>
+    </xs:attribute>
+
+
+    <xs:attribute name="gravity">
+        <xs:annotation>
+            <xs:documentation></xs:documentation>
+        </xs:annotation>
+        <xs:simpleType>
+            <xs:union memberTypes="xs:string">
+                <xs:simpleType>
+                    <xs:restriction base="xs:string">
+                        <xs:enumeration value="bottom"/>
+                        <xs:enumeration value="center"/>
+                        <xs:enumeration value="center_horizontal"/>
+                        <xs:enumeration value="center_vertical"/>
+                        <xs:enumeration value="clip_horizontal"/>
+                        <xs:enumeration value="clip_vertical"/>
+                        <xs:enumeration value="end"/>
+                        <xs:enumeration value="fill"/>
+                        <xs:enumeration value="fill_horizontal"/>
+                        <xs:enumeration value="fill_vertical"/>
+                        <xs:enumeration value="left"/>
+                        <xs:enumeration value="right"/>
+                        <xs:enumeration value="start"/>
+                        <xs:enumeration value="top"/>
+                    </xs:restriction>
+                </xs:simpleType>
+            </xs:union>
+        </xs:simpleType>
+    </xs:attribute>
+
+
+    <xs:attribute name="hint">
+        <xs:annotation>
+            <xs:documentation>Hint text to display when the text is empty.</xs:documentation>
+        </xs:annotation>
+        <xs:simpleType>
+            <xs:union memberTypes="xs:string">
+                <xs:simpleType>
+                    <xs:restriction base="xs:string">
+                    </xs:restriction>
+                </xs:simpleType>
+            </xs:union>
+        </xs:simpleType>
+    </xs:attribute>
+
+
+    <xs:attribute name="imeOptions">
+        <xs:annotation>
+            <xs:documentation></xs:documentation>
+        </xs:annotation>
+        <xs:simpleType>
+            <xs:union memberTypes="xs:string">
+                <xs:simpleType>
+                    <xs:restriction base="xs:string">
+                        <xs:enumeration value="actionDone"/>
+                        <xs:enumeration value="actionGo"/>
+                        <xs:enumeration value="actionNext"/>
+                        <xs:enumeration value="actionNone"/>
+                        <xs:enumeration value="actionPrevious"/>
+                        <xs:enumeration value="actionSearch"/>
+                        <xs:enumeration value="actionSend"/>
+                        <xs:enumeration value="actionUnspecified"/>
+                        <xs:enumeration value="flagForceAscii"/>
+                        <xs:enumeration value="flagNavigateNext"/>
+                        <xs:enumeration value="flagNavigatePrevious"/>
+                        <xs:enumeration value="flagNoAccessoryAction"/>
+                        <xs:enumeration value="flagNoEnterAction"/>
+                        <xs:enumeration value="flagNoExtractUi"/>
+                        <xs:enumeration value="flagNoFullscreen"/>
+                        <xs:enumeration value="normal"/>
+                    </xs:restriction>
+                </xs:simpleType>
+            </xs:union>
+        </xs:simpleType>
+    </xs:attribute>
+
+
+    <xs:attribute name="layout_gravity">
+        <xs:annotation>
+            <xs:documentation></xs:documentation>
+        </xs:annotation>
+        <xs:simpleType>
+            <xs:union memberTypes="xs:string">
+                <xs:simpleType>
+                    <xs:restriction base="xs:string">
+                        <xs:enumeration value="bottom"/>
+                        <xs:enumeration value="center"/>
+                        <xs:enumeration value="center_horizontal"/>
+                        <xs:enumeration value="center_vertical"/>
+                        <xs:enumeration value="clip_horizontal"/>
+                        <xs:enumeration value="clip_vertical"/>
+                        <xs:enumeration value="end"/>
+                        <xs:enumeration value="fill"/>
+                        <xs:enumeration value="fill_horizontal"/>
+                        <xs:enumeration value="fill_vertical"/>
+                        <xs:enumeration value="left"/>
+                        <xs:enumeration value="right"/>
+                        <xs:enumeration value="start"/>
+                        <xs:enumeration value="top"/>
+                    </xs:restriction>
+                </xs:simpleType>
+            </xs:union>
+        </xs:simpleType>
+    </xs:attribute>
+    <xs:attribute name="layout_height">
+        <xs:annotation>
+            <xs:documentation>Specifies the basic height of the view. This is a required attribute for any view inside
+                of a containing layout manager. Its value may be a dimension (such as "12dip") for a constant height or
+                one of the special constants.
+            </xs:documentation>
+        </xs:annotation>
+        <xs:simpleType>
+            <xs:union memberTypes="xs:string">
+                <xs:simpleType>
+                    <xs:restriction base="xs:string">
+                        <xs:enumeration value="match_parent"/>
+                        <xs:enumeration value="wrap_content"/>
+                    </xs:restriction>
+                </xs:simpleType>
+            </xs:union>
+        </xs:simpleType>
+    </xs:attribute>
+    <xs:attribute name="layout_margin">
+        <xs:annotation>
+            <xs:documentation>Specifies extra space on the left, top, right and bottom sides of this view. This space is
+                outside this view's bounds.
+            </xs:documentation>
+        </xs:annotation>
+        <xs:simpleType>
+            <xs:union memberTypes="xs:string">
+                <xs:simpleType>
+                    <xs:restriction base="xs:string">
+                    </xs:restriction>
+                </xs:simpleType>
+            </xs:union>
+        </xs:simpleType>
+    </xs:attribute>
+    <xs:attribute name="layout_marginBottom">
+        <xs:annotation>
+            <xs:documentation>Specifies extra space on the bottom side of this view. This space is outside this view's
+                bounds.
+            </xs:documentation>
+        </xs:annotation>
+        <xs:simpleType>
+            <xs:union memberTypes="xs:string">
+                <xs:simpleType>
+                    <xs:restriction base="xs:string">
+                    </xs:restriction>
+                </xs:simpleType>
+            </xs:union>
+        </xs:simpleType>
+    </xs:attribute>
+    <xs:attribute name="layout_marginEnd">
+        <xs:annotation>
+            <xs:documentation>Specifies extra space on the end side of this view. This space is outside this view's
+                bounds.
+            </xs:documentation>
+        </xs:annotation>
+        <xs:simpleType>
+            <xs:union memberTypes="xs:string">
+                <xs:simpleType>
+                    <xs:restriction base="xs:string">
+
+                    </xs:restriction>
+                </xs:simpleType>
+            </xs:union>
+        </xs:simpleType>
+    </xs:attribute>
+    <xs:attribute name="layout_marginLeft">
+        <xs:annotation>
+            <xs:documentation>Specifies extra space on the left side of this view. This space is outside this view's
+                bounds.
+            </xs:documentation>
+        </xs:annotation>
+        <xs:simpleType>
+            <xs:union memberTypes="xs:string">
+                <xs:simpleType>
+                    <xs:restriction base="xs:string">
+                    </xs:restriction>
+                </xs:simpleType>
+            </xs:union>
+        </xs:simpleType>
+    </xs:attribute>
+    <xs:attribute name="layout_marginRight">
+        <xs:annotation>
+            <xs:documentation>Specifies extra space on the right side of this view. This space is outside this view's
+                bounds.
+            </xs:documentation>
+        </xs:annotation>
+        <xs:simpleType>
+            <xs:union memberTypes="xs:string">
+                <xs:simpleType>
+                    <xs:restriction base="xs:string">
+
+                    </xs:restriction>
+                </xs:simpleType>
+            </xs:union>
+        </xs:simpleType>
+    </xs:attribute>
+    <xs:attribute name="layout_marginStart">
+        <xs:annotation>
+            <xs:documentation>Specifies extra space on the start side of this view. This space is outside this view's
+                bounds.
+            </xs:documentation>
+        </xs:annotation>
+        <xs:simpleType>
+            <xs:union memberTypes="xs:string">
+                <xs:simpleType>
+                    <xs:restriction base="xs:string">
+
+                    </xs:restriction>
+                </xs:simpleType>
+            </xs:union>
+        </xs:simpleType>
+    </xs:attribute>
+    <xs:attribute name="layout_marginTop">
+        <xs:annotation>
+            <xs:documentation>Specifies extra space on the top side of this view. This space is outside this view's
+                bounds.
+            </xs:documentation>
+        </xs:annotation>
+        <xs:simpleType>
+            <xs:union memberTypes="xs:string">
+                <xs:simpleType>
+                    <xs:restriction base="xs:string">
+
+                    </xs:restriction>
+                </xs:simpleType>
+            </xs:union>
+        </xs:simpleType>
+    </xs:attribute>
+    <xs:attribute name="layout_weight">
+        <xs:annotation>
+            <xs:documentation></xs:documentation>
+        </xs:annotation>
+        <xs:simpleType>
+            <xs:union memberTypes="xs:string">
+                <xs:simpleType>
+                    <xs:restriction base="xs:string">
+                        <xs:enumeration value="match_parent"/>
+                        <xs:enumeration value="wrap_parent"/>
+                    </xs:restriction>
+                </xs:simpleType>
+            </xs:union>
+        </xs:simpleType>
+    </xs:attribute>
+    <xs:attribute name="dataSource">
+        <xs:annotation>
+            <xs:documentation>Spinner的数据源，使用|进行分割</xs:documentation>
+        </xs:annotation>
+        <xs:simpleType>
+            <xs:union memberTypes="xs:string">
+                <xs:simpleType>
+                    <xs:restriction base="xs:string"/>
+                </xs:simpleType>
+            </xs:union>
+        </xs:simpleType>
+    </xs:attribute>
+
+
+    <xs:attribute name="layout_width">
+        <xs:annotation>
+            <xs:documentation>Specifies the basic width of the view. This is a required attribute for any view inside of
+                a containing layout manager. Its value may be a dimension (such as "12dip") for a constant width or one
+                of the special constants.
+            </xs:documentation>
+        </xs:annotation>
+        <xs:simpleType>
+            <xs:union memberTypes="xs:string">
+                <xs:simpleType>
+                    <xs:restriction base="xs:string">
+                        <xs:enumeration value="match_parent"/>
+                        <xs:enumeration value="wrap_parent"/>
+                    </xs:restriction>
+                </xs:simpleType>
+            </xs:union>
+        </xs:simpleType>
+    </xs:attribute>
+
+
+    <xs:attribute name="cornerRadius">
+        <xs:annotation>
+            <xs:documentation>
+                圆角的度数.
+            </xs:documentation>
+        </xs:annotation>
+        <xs:simpleType>
+            <xs:union memberTypes="xs:string">
+                <xs:simpleType>
+                    <xs:restriction base="xs:string">
+                    </xs:restriction>
+                </xs:simpleType>
+            </xs:union>
+        </xs:simpleType>
+    </xs:attribute>
+    <xs:attribute name="lines">
+        <xs:annotation>
+            <xs:documentation>Makes the TextView be exactly this many lines tall.</xs:documentation>
+        </xs:annotation>
+        <xs:simpleType>
+            <xs:union memberTypes="xs:string">
+                <xs:simpleType>
+                    <xs:restriction base="xs:string">
+                    </xs:restriction>
+                </xs:simpleType>
+            </xs:union>
+        </xs:simpleType>
+    </xs:attribute>
+    <xs:attribute name="maxHeight">
+        <xs:annotation>
+            <xs:documentation>An optional argument to supply a maximum height for this view. See {see
+                android.widget.ImageView#setMaxHeight} for details.
+            </xs:documentation>
+        </xs:annotation>
+        <xs:simpleType>
+            <xs:union memberTypes="xs:string">
+                <xs:simpleType>
+                    <xs:restriction base="xs:string">
+                    </xs:restriction>
+                </xs:simpleType>
+            </xs:union>
+        </xs:simpleType>
+    </xs:attribute>
+    <xs:attribute name="maxLength">
+        <xs:annotation>
+            <xs:documentation>Set an input filter to constrain the text length to the specified number.
+            </xs:documentation>
+        </xs:annotation>
+        <xs:simpleType>
+            <xs:union memberTypes="xs:string">
+                <xs:simpleType>
+                    <xs:restriction base="xs:string">
+                    </xs:restriction>
+                </xs:simpleType>
+            </xs:union>
+        </xs:simpleType>
+    </xs:attribute>
+    <xs:attribute name="maxLines">
+        <xs:annotation>
+            <xs:documentation>Makes the TextView be at most this many lines tall. When used on an editable text, the
+                inputType attribute's value must be combined with the textMultiLine flag for the maxLines attribute to
+                apply.
+            </xs:documentation>
+        </xs:annotation>
+        <xs:simpleType>
+            <xs:union memberTypes="xs:string">
+                <xs:simpleType>
+                    <xs:restriction base="xs:string">
+                    </xs:restriction>
+                </xs:simpleType>
+            </xs:union>
+        </xs:simpleType>
+    </xs:attribute>
+    <xs:attribute name="maxWidth">
+        <xs:annotation>
+            <xs:documentation>An optional argument to supply a maximum width for this view. See {see
+                android.widget.ImageView#setMaxWidth} for details.
+            </xs:documentation>
+        </xs:annotation>
+        <xs:simpleType>
+            <xs:union memberTypes="xs:string">
+                <xs:simpleType>
+                    <xs:restriction base="xs:string">
+                    </xs:restriction>
+                </xs:simpleType>
+            </xs:union>
+        </xs:simpleType>
+    </xs:attribute>
+    <xs:attribute name="minHeight">
+        <xs:annotation>
+            <xs:documentation>Defines the minimum height of the view. It is not guaranteed the view will be able to
+                achieve this minimum height (for example, if its parent layout constrains it with less available
+                height).
+            </xs:documentation>
+        </xs:annotation>
+        <xs:simpleType>
+            <xs:union memberTypes="xs:string">
+                <xs:simpleType>
+                    <xs:restriction base="xs:string">
+                    </xs:restriction>
+                </xs:simpleType>
+            </xs:union>
+        </xs:simpleType>
+    </xs:attribute>
+    <xs:attribute name="minWidth">
+        <xs:annotation>
+            <xs:documentation>Defines the minimum width of the view. It is not guaranteed the view will be able to
+                achieve this minimum width (for example, if its parent layout constrains it with less available width).
+            </xs:documentation>
+        </xs:annotation>
+        <xs:simpleType>
+            <xs:union memberTypes="xs:string">
+                <xs:simpleType>
+                    <xs:restriction base="xs:string">
+
+                    </xs:restriction>
+                </xs:simpleType>
+            </xs:union>
+        </xs:simpleType>
+    </xs:attribute>
+    <xs:attribute name="numeric">
+        <xs:annotation>
+            <xs:documentation>If set, specifies that this TextView has a numeric input method. The default is false.
+                Deprecated: Use inputType instead.
+            </xs:documentation>
+        </xs:annotation>
+        <xs:simpleType>
+            <xs:union memberTypes="xs:string">
+                <xs:simpleType>
+                    <xs:restriction base="xs:string">
+                        <xs:enumeration value="decimal"/>
+                        <xs:enumeration value="integer"/>
+                        <xs:enumeration value="signed"/>
+                    </xs:restriction>
+                </xs:simpleType>
+            </xs:union>
+        </xs:simpleType>
+    </xs:attribute>
+    <xs:attribute name="orientation">
+        <xs:annotation>
+            <xs:documentation></xs:documentation>
+        </xs:annotation>
+        <xs:simpleType>
+            <xs:union memberTypes="xs:string">
+                <xs:simpleType>
+                    <xs:restriction base="xs:string">
+                        <xs:enumeration value="horizontal"/>
+                        <xs:enumeration value="vertical"/>
+                    </xs:restriction>
+                </xs:simpleType>
+            </xs:union>
+        </xs:simpleType>
+    </xs:attribute>
+    <xs:attribute name="padding">
+        <xs:annotation>
+            <xs:documentation>Sets the padding, in pixels, of all four edges. Padding is defined as space between the
+                edges of the view and the view's content. A views size will include it's padding. If a
+                android.R.attr.background is provided, the padding will initially be set to that (0 if the drawable does
+                not have padding). Explicitly setting a padding value will override the corresponding padding found in
+                the background.
+            </xs:documentation>
+        </xs:annotation>
+        <xs:simpleType>
+            <xs:union memberTypes="xs:string">
+                <xs:simpleType>
+                    <xs:restriction base="xs:string">
+                    </xs:restriction>
+                </xs:simpleType>
+            </xs:union>
+        </xs:simpleType>
+    </xs:attribute>
+    <xs:attribute name="paddingBottom">
+        <xs:annotation>
+            <xs:documentation>Sets the padding, in pixels, of the bottom edge; see android.R.attr.padding.
+            </xs:documentation>
+        </xs:annotation>
+        <xs:simpleType>
+            <xs:union memberTypes="xs:string">
+                <xs:simpleType>
+                    <xs:restriction base="xs:string">
+                    </xs:restriction>
+                </xs:simpleType>
+            </xs:union>
+        </xs:simpleType>
+    </xs:attribute>
+    <xs:attribute name="paddingEnd">
+        <xs:annotation>
+            <xs:documentation>Sets the padding, in pixels, of the end edge; see android.R.attr.padding.
+            </xs:documentation>
+        </xs:annotation>
+        <xs:simpleType>
+            <xs:union memberTypes="xs:string">
+                <xs:simpleType>
+                    <xs:restriction base="xs:string">
+                    </xs:restriction>
+                </xs:simpleType>
+            </xs:union>
+        </xs:simpleType>
+    </xs:attribute>
+    <xs:attribute name="paddingLeft">
+        <xs:annotation>
+            <xs:documentation>Sets the padding, in pixels, of the left edge; see android.R.attr.padding.
+            </xs:documentation>
+        </xs:annotation>
+        <xs:simpleType>
+            <xs:union memberTypes="xs:string">
+                <xs:simpleType>
+                    <xs:restriction base="xs:string">
+                    </xs:restriction>
+                </xs:simpleType>
+            </xs:union>
+        </xs:simpleType>
+    </xs:attribute>
+    <xs:attribute name="paddingRight">
+        <xs:annotation>
+            <xs:documentation>Sets the padding, in pixels, of the right edge; see android.R.attr.padding.
+            </xs:documentation>
+        </xs:annotation>
+        <xs:simpleType>
+            <xs:union memberTypes="xs:string">
+                <xs:simpleType>
+                    <xs:restriction base="xs:string">
+                    </xs:restriction>
+                </xs:simpleType>
+            </xs:union>
+        </xs:simpleType>
+    </xs:attribute>
+    <xs:attribute name="paddingStart">
+        <xs:annotation>
+            <xs:documentation>Sets the padding, in pixels, of the start edge; see android.R.attr.padding.
+            </xs:documentation>
+        </xs:annotation>
+        <xs:simpleType>
+            <xs:union memberTypes="xs:string">
+                <xs:simpleType>
+                    <xs:restriction base="xs:string">
+                    </xs:restriction>
+                </xs:simpleType>
+            </xs:union>
+        </xs:simpleType>
+    </xs:attribute>
+    <xs:attribute name="paddingTop">
+        <xs:annotation>
+            <xs:documentation>Sets the padding, in pixels, of the top edge; see android.R.attr.padding.
+            </xs:documentation>
+        </xs:annotation>
+        <xs:simpleType>
+            <xs:union memberTypes="xs:string">
+                <xs:simpleType>
+                    <xs:restriction base="xs:string">
+                    </xs:restriction>
+                </xs:simpleType>
+            </xs:union>
+        </xs:simpleType>
+    </xs:attribute>
+    <xs:attribute name="scaleType">
+        <xs:annotation>
+            <xs:documentation>Controls how the image should be resized or moved to match the size of this ImageView.
+            </xs:documentation>
+        </xs:annotation>
+        <xs:simpleType>
+            <xs:union memberTypes="xs:string">
+                <xs:simpleType>
+                    <xs:restriction base="xs:string">
+                        <xs:enumeration value="center"/>
+                        <xs:enumeration value="centerCrop"/>
+                        <xs:enumeration value="centerInside"/>
+                        <xs:enumeration value="fitCenter"/>
+                        <xs:enumeration value="fitEnd"/>
+                        <xs:enumeration value="fitStart"/>
+                        <xs:enumeration value="fitXY"/>
+                        <xs:enumeration value="matrix"/>
+                    </xs:restriction>
+                </xs:simpleType>
+            </xs:union>
+        </xs:simpleType>
+    </xs:attribute>
+    <xs:attribute name="src">
+        <xs:annotation>
+            <xs:documentation>Sets a drawable as the content of this ImageView.</xs:documentation>
+        </xs:annotation>
+        <xs:simpleType>
+            <xs:union memberTypes="xs:string">
+                <xs:simpleType>
+                    <xs:restriction base="xs:string">
+                    </xs:restriction>
+                </xs:simpleType>
+            </xs:union>
+        </xs:simpleType>
+    </xs:attribute>
+    <xs:attribute name="tag">
+        <xs:annotation>
+            <xs:documentation>Supply a tag for this view containing a String, to be retrieved later with View.getTag()
+                or searched for with View.findViewWithTag(). It is generally preferable to use IDs (through the
+                android:id attribute) instead of tags because they are faster and allow for compile-time type checking.
+            </xs:documentation>
+        </xs:annotation>
+        <xs:simpleType>
+            <xs:union memberTypes="xs:string">
+                <xs:simpleType>
+                    <xs:restriction base="xs:string">
+                    </xs:restriction>
+                </xs:simpleType>
+            </xs:union>
+        </xs:simpleType>
+    </xs:attribute>
+    <xs:attribute name="text">
+        <xs:annotation>
+            <xs:documentation>Text to display.</xs:documentation>
+        </xs:annotation>
+        <xs:simpleType>
+            <xs:union memberTypes="xs:string">
+                <xs:simpleType>
+                    <xs:restriction base="xs:string">
+                    </xs:restriction>
+                </xs:simpleType>
+            </xs:union>
+        </xs:simpleType>
+    </xs:attribute>
+    <xs:attribute name="defaultText">
+        <xs:annotation>
+            <xs:documentation>Spinner 默认选择文本.</xs:documentation>
+        </xs:annotation>
+        <xs:simpleType>
+            <xs:union memberTypes="xs:string">
+                <xs:simpleType>
+                    <xs:restriction base="xs:string">
+                    </xs:restriction>
+                </xs:simpleType>
+            </xs:union>
+        </xs:simpleType>
+    </xs:attribute>
+
+    <xs:attribute name="popupHeight">
+        <xs:annotation>
+            <xs:documentation>Spinner 弹出框高度.</xs:documentation>
+        </xs:annotation>
+        <xs:simpleType>
+            <xs:union memberTypes="xs:string">
+                <xs:simpleType>
+                    <xs:restriction base="xs:string">
+                    </xs:restriction>
+                </xs:simpleType>
+            </xs:union>
+        </xs:simpleType>
+    </xs:attribute>
+    <xs:attribute name="textColor">
+        <xs:annotation>
+            <xs:documentation></xs:documentation>
+        </xs:annotation>
+        <xs:simpleType>
+            <xs:union memberTypes="xs:string">
+                <xs:simpleType>
+                    <xs:restriction base="xs:string">
+                    </xs:restriction>
+                </xs:simpleType>
+            </xs:union>
+        </xs:simpleType>
+    </xs:attribute>
+    <xs:attribute name="textSize">
+        <xs:annotation>
+            <xs:documentation></xs:documentation>
+        </xs:annotation>
+        <xs:simpleType>
+            <xs:union memberTypes="xs:string">
+                <xs:simpleType>
+                    <xs:restriction base="xs:string">
+                    </xs:restriction>
+                </xs:simpleType>
+            </xs:union>
+        </xs:simpleType>
+    </xs:attribute>
+    <xs:attribute name="visibility">
+        <xs:annotation>
+            <xs:documentation>Controls the initial visibility of the view.</xs:documentation>
+        </xs:annotation>
+        <xs:simpleType>
+            <xs:union memberTypes="xs:string">
+                <xs:simpleType>
+                    <xs:restriction base="xs:string">
+                        <xs:enumeration value="gone"/>
+                        <xs:enumeration value="invisible"/>
+                        <xs:enumeration value="visible"/>
+                    </xs:restriction>
+                </xs:simpleType>
+            </xs:union>
+        </xs:simpleType>
+    </xs:attribute>
+    <xs:attribute name="weightSum">
+        <xs:annotation>
+            <xs:documentation>Defines the maximum weight sum. If unspecified, the sum is computed by adding the
+                layout_weight of all of the children. This can be used for instance to give a single child 50% of the
+                total available space by giving it a layout_weight of 0.5 and setting the weightSum to 1.0.
+            </xs:documentation>
+        </xs:annotation>
+        <xs:simpleType>
+            <xs:union memberTypes="xs:string">
+                <xs:simpleType>
+                    <xs:restriction base="xs:string"/>
+                </xs:simpleType>
+            </xs:union>
+        </xs:simpleType>
+    </xs:attribute>
+    <xs:attribute name="url">
+        <xs:annotation>
+            <xs:documentation>webview url .</xs:documentation>
+        </xs:annotation>
+        <xs:simpleType>
+            <xs:union memberTypes="xs:string">
+                <xs:simpleType>
+                    <xs:restriction base="xs:string">
+                    </xs:restriction>
+                </xs:simpleType>
+            </xs:union>
+        </xs:simpleType>
+    </xs:attribute>
+
+
+    <xs:attribute name="cardBackgroundColor">
+        <xs:annotation>
+            <xs:documentation>CardView cardBackgroundColor .</xs:documentation>
+        </xs:annotation>
+        <xs:simpleType>
+            <xs:union memberTypes="xs:string">
+                <xs:simpleType>
+                    <xs:restriction base="xs:string">
+                    </xs:restriction>
+                </xs:simpleType>
+            </xs:union>
+        </xs:simpleType>
+    </xs:attribute>
+    <xs:attribute name="cardCornerRadius">
+        <xs:annotation>
+            <xs:documentation>CardView cardCornerRadius .</xs:documentation>
+        </xs:annotation>
+        <xs:simpleType>
+            <xs:union memberTypes="xs:string">
+                <xs:simpleType>
+                    <xs:restriction base="xs:string">
+                    </xs:restriction>
+                </xs:simpleType>
+            </xs:union>
+        </xs:simpleType>
+    </xs:attribute>
+    <xs:attribute name="cardElevation">
+        <xs:annotation>
+            <xs:documentation>CardView cardElevation .</xs:documentation>
+        </xs:annotation>
+        <xs:simpleType>
+            <xs:union memberTypes="xs:string">
+                <xs:simpleType>
+                    <xs:restriction base="xs:string">
+                    </xs:restriction>
+                </xs:simpleType>
+            </xs:union>
+        </xs:simpleType>
+    </xs:attribute>
+    <xs:attribute name="cardMaxElevation">
+        <xs:annotation>
+            <xs:documentation>CardView cardMaxElevation .</xs:documentation>
+        </xs:annotation>
+        <xs:simpleType>
+            <xs:union memberTypes="xs:string">
+                <xs:simpleType>
+                    <xs:restriction base="xs:string">
+                    </xs:restriction>
+                </xs:simpleType>
+            </xs:union>
+        </xs:simpleType>
+    </xs:attribute>
+
+
+    <xs:attribute name="flexDirection">
+        <xs:annotation>
+            <xs:documentation>FlexboxLayout flexDirection .</xs:documentation>
+        </xs:annotation>
+        <xs:simpleType>
+            <xs:union memberTypes="xs:string">
+                <xs:simpleType>
+                    <xs:restriction base="xs:string">
+                        <xs:enumeration value="row"/>
+                        <xs:enumeration value="row_reverse"/>
+                        <xs:enumeration value="column"/>
+                        <xs:enumeration value="column_reverse"/>
+                    </xs:restriction>
+                </xs:simpleType>
+            </xs:union>
+        </xs:simpleType>
+    </xs:attribute>
+
+
+    <xs:attribute name="flexWrap">
+        <xs:annotation>
+            <xs:documentation>FlexboxLayout flexWrap .</xs:documentation>
+        </xs:annotation>
+        <xs:simpleType>
+            <xs:union memberTypes="xs:string">
+                <xs:simpleType>
+                    <xs:restriction base="xs:string">
+                        <xs:enumeration value="nowrap"/>
+                        <xs:enumeration value="wrap"/>
+                        <xs:enumeration value="wrap_reverse"/>
+                        <xs:enumeration value="column_reverse"/>
+                        <xs:enumeration value="column_reverse"/>
+                    </xs:restriction>
+                </xs:simpleType>
+            </xs:union>
+        </xs:simpleType>
+    </xs:attribute>
+
+    <xs:attribute name="justifyContent">
+        <xs:annotation>
+            <xs:documentation>FlexboxLayout justifyContent .</xs:documentation>
+        </xs:annotation>
+        <xs:simpleType>
+            <xs:union memberTypes="xs:string">
+                <xs:simpleType>
+                    <xs:restriction base="xs:string">
+                        <xs:enumeration value="flex_start"/>
+                        <xs:enumeration value="flex_end"/>
+                        <xs:enumeration value="center"/>
+                        <xs:enumeration value="space_between"/>
+                        <xs:enumeration value="space_evenly"/>
+                    </xs:restriction>
+                </xs:simpleType>
+            </xs:union>
+        </xs:simpleType>
+    </xs:attribute>
+
+
+    <xs:attribute name="alignItems">
+        <xs:annotation>
+            <xs:documentation>FlexboxLayout alignItems .</xs:documentation>
+        </xs:annotation>
+        <xs:simpleType>
+            <xs:union memberTypes="xs:string">
+                <xs:simpleType>
+                    <xs:restriction base="xs:string">
+                        <xs:enumeration value="flex_start"/>
+                        <xs:enumeration value="flex_end"/>
+                        <xs:enumeration value="center"/>
+                        <xs:enumeration value="baseline"/>
+                        <xs:enumeration value="stretch"/>
+                    </xs:restriction>
+                </xs:simpleType>
+            </xs:union>
+        </xs:simpleType>
+    </xs:attribute>
+
+    <xs:attribute name="alignContent">
+        <xs:annotation>
+            <xs:documentation>FlexboxLayout alignContent .</xs:documentation>
+        </xs:annotation>
+        <xs:simpleType>
+            <xs:union memberTypes="xs:string">
+                <xs:simpleType>
+                    <xs:restriction base="xs:string">
+                        <xs:enumeration value="flex_start"/>
+                        <xs:enumeration value="flex_end"/>
+                        <xs:enumeration value="center"/>
+                        <xs:enumeration value="space_between"/>
+                        <xs:enumeration value="space_around"/>
+                        <xs:enumeration value="stretch"/>
+                    </xs:restriction>
+                </xs:simpleType>
+            </xs:union>
+        </xs:simpleType>
+    </xs:attribute>
+
+
+    <xs:attribute name="layout_order">
+        <xs:annotation>
+            <xs:documentation>FlexboxLayout child layout_order.
+            </xs:documentation>
+        </xs:annotation>
+        <xs:simpleType>
+            <xs:union memberTypes="xs:integer">
+            </xs:union>
+        </xs:simpleType>
+    </xs:attribute>
+
+    <xs:attribute name="layout_flexGrow">
+        <xs:annotation>
+            <xs:documentation>FlexboxLayout child layout_flexGrow .
+            </xs:documentation>
+        </xs:annotation>
+        <xs:simpleType>
+            <xs:union memberTypes="xs:float">
+            </xs:union>
+        </xs:simpleType>
+    </xs:attribute>
+    <xs:attribute name="layout_flexShrink">
+        <xs:annotation>
+            <xs:documentation>FlexboxLayout child layout_flexShrink .
+            </xs:documentation>
+        </xs:annotation>
+        <xs:simpleType>
+            <xs:union memberTypes="xs:float">
+            </xs:union>
+        </xs:simpleType>
+    </xs:attribute>
+    <xs:attribute name="layout_flexBasisPercent">
+        <xs:annotation>
+            <xs:documentation>FlexboxLayout child layout_flexBasisPercent .
+            </xs:documentation>
+        </xs:annotation>
+        <xs:simpleType>
+            <xs:union memberTypes="xs:string">
+            </xs:union>
+        </xs:simpleType>
+    </xs:attribute>
+
+
+    <xs:attribute name="layout_wrapBefore">
+        <xs:annotation>
+            <xs:documentation>FlexboxLayout child layout_wrapBefore .
+            </xs:documentation>
+        </xs:annotation>
+        <xs:simpleType>
+            <xs:union memberTypes="xs:boolean">
+            </xs:union>
+        </xs:simpleType>
+    </xs:attribute>
+
+
+    <xs:attribute name="layout_minWidth">
+        <xs:annotation>
+            <xs:documentation>FlexboxLayout child layout_minWidth .
+            </xs:documentation>
+        </xs:annotation>
+        <xs:simpleType>
+            <xs:union memberTypes="xs:string">
+            </xs:union>
+        </xs:simpleType>
+    </xs:attribute>
+
+
+    <xs:attribute name="layout_minHeight">
+        <xs:annotation>
+            <xs:documentation>FlexboxLayout child layout_minHeight .
+            </xs:documentation>
+        </xs:annotation>
+        <xs:simpleType>
+            <xs:union memberTypes="xs:string">
+            </xs:union>
+        </xs:simpleType>
+    </xs:attribute>
+
+
+    <xs:attribute name="layout_maxWidth">
+        <xs:annotation>
+            <xs:documentation>FlexboxLayout child layout_maxWidth .
+            </xs:documentation>
+        </xs:annotation>
+        <xs:simpleType>
+            <xs:union memberTypes="xs:string">
+            </xs:union>
+        </xs:simpleType>
+    </xs:attribute>
+
+
+    <xs:attribute name="layout_maxHeight">
+        <xs:annotation>
+            <xs:documentation>FlexboxLayout child layout_maxHeight .
+            </xs:documentation>
+        </xs:annotation>
+        <xs:simpleType>
+            <xs:union memberTypes="xs:string">
+            </xs:union>
+        </xs:simpleType>
+    </xs:attribute>
+
+
+    <xs:attribute name="layout_alignSelf">
+        <xs:annotation>
+            <xs:documentation>FlexboxLayout child layout_alignSelf .</xs:documentation>
+        </xs:annotation>
+        <xs:simpleType>
+            <xs:union memberTypes="xs:string">
+                <xs:simpleType>
+                    <xs:restriction base="xs:string">
+                        <xs:enumeration value="auto"/>
+                        <xs:enumeration value="flex_start"/>
+                        <xs:enumeration value="flex_end"/>
+                        <xs:enumeration value="center"/>
+                        <xs:enumeration value="baseline"/>
+                        <xs:enumeration value="stretch"/>
+                    </xs:restriction>
+                </xs:simpleType>
+            </xs:union>
+        </xs:simpleType>
+    </xs:attribute>
+
+
+</xs:schema>
