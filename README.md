@@ -1,12 +1,9 @@
 # 说明
 - 该仓库专门用户存放EasyClick的三方扩展类库，包括ui、js、以及插件等
-
+- EasyClick支持苹果脚本编写、安卓脚本编写等，还支持苹果群控，AI群控手机等等，做跨境电商、TikTok群控等等必备产品
 
 # 官方文档
 - https://ieasyclick.com/
-# 官方博客地址
-- https://blog.ieasyclick.com/
-- 
 # iEasyRun 手机自动化AI工作站
 iEasyRun AI操作手机+EasyClick苹果群控
 iEasyRun 这个产品是使用AI操作手机的，基于EasyClick 技术构建，可以使用节点、VLM、OPENCV等技术识别手机屏幕，还能有离线免费的OCR来使用, 可以用AI很多手机一起执行，如果不想写自动化脚本可以试试这个产品，完全免费，支持安卓、苹果、鸿蒙系统，可接入大模型，可用 MCP 接入 WorkBuddy 等三方软件
@@ -14,6 +11,9 @@ iEasyRun 这个产品是使用AI操作手机的，基于EasyClick 技术构建�
 官网 https://www.ieasyrun.com
 
 和AutoGLM和MobileRun等大模型比较，我们是可以群控的，可以多个手机同时被大模型控制，动作一致，并且可以不写脚本的情况下自主思考完成客户要求，例如定时发送视频、回复客户消息等等
+
+
+[EasyClick 安卓版蓝牙HID开源代码](https://github.com/easy-click/easyclick-android-ble-source)
 
 # 最新文档备份地址
 - https://github.com/easy-click/easyclick-docs-md
@@ -41,7 +41,8 @@ iEasyRun 这个产品是使用AI操作手机的，基于EasyClick 技术构建�
     - 支持脚本编译原生代码，支持代码加密防破解 
 - 文档地址 [https://ieasyclick.com/docs](https://ieasyclick.com/docs)
 - 
-## EC iOS USB版本
+## EC iOS USB版本 苹果群控
+- 支持USBHID技术，过APP风控，支持打字、投屏操作、同步操作、上传视频
 - 支持iOS12以上的系统
 - 支持免越狱脚本编写
 - 自带投屏功能和中控脚本管理
@@ -50,7 +51,7 @@ iEasyRun 这个产品是使用AI操作手机的，基于EasyClick 技术构建�
 - 自带YOLO图像识别支持，训练模型即可使用
 - 文档地址[https://ieasyclick.com/iosdocs](https://ieasyclick.com/iosdocs)
 
-## EC iOS 脱机版本
+## EC iOS 脱机版本 + 无线苹果群控
 - 支持iOS15以上的系统
 - 支持免越狱脚本编写
 - 自带投屏功能和中控脚本管理
